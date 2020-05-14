@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: rgba(206, 198, 198, 0.89);
+}
+
+body > * {
+  overflow-y: visible;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.float {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  color: darkgray;
+}
+
+li {
+  margin: 10px;
+  border-bottom: 1px dotted rgb(126, 125, 125);
+}
+
+a {
+  color: fuchsia;
+  text-decoration-line: none;
+}
+
+h3 {
+  color: rgb(41, 40, 40);
+  margin: 10px 0 10px 0;
+  max-width: fit-content;
+  background: url("https://previews.123rf.com/images/annagolant/annagolant1612/annagolant161200034/70849414-rayas-azul-gris%C3%A1ceas-sobre-fondo-blanco-patr%C3%B3n-diagonal-a-rayas-fondo-azul-l%C3%ADneas-diagonales-tema-de-invier.jpg");
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 15% auto;
+  grid-template-areas:
+    "header header"
+    "index articles";
+}
+
+.header {
+  width: 96%;
+  height: 90%;
+  grid-area: header;
+  justify-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: grey;
+  margin-left: 60px;
+}
+
+.header h1 span {
+  color: fuchsia;
+}
+
+.header img {
+  max-width: 50%;
+  justify-self: flex-end;
+  border-radius: 10px;
+}
+
+.index-main {
+  grid-area: index;
+  width: 83%;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-main > * {
+  width: 90%;
+  height: fit-content;
+  padding: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.articles-main {
+  grid-area: articles;
+  width: 100%;
+  height: fit-content;
+  justify-self: center;
+}
+
+.articles-main > * {
+  max-width: 93%;
+  height: fit-content;
+  padding: 10px;
+  margin: 20px;
+  align-items: center;
+  justify-items: center;
+  word-wrap: break-word;
+}
+
+.articles-main > *:nth-child(odd) > * {
+  padding-left: 100px;
+  word-wrap: break-word;
+}
+
+.articles-main > *:nth-child(even) > * {
+  padding-right: 100px;
+  word-wrap: break-word;
+}
